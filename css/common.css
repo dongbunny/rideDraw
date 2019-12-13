@@ -1,0 +1,431 @@
+@charset "UTF-8";
+/*////////////////////////
+commons
+///////////////////////*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.clearfix:after {   
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+/* clearfix for ie7 */
+.clearfix{
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+
+a {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* スマホのハイライトデザインを無効にする */
+}
+a:focus {
+	outline: none;
+}
+a img:hover {
+	opacity: 0.5 ;
+	filter: alpha(opacity=50) ;	/* Ie用 */
+    -webkit-transition: 0.6s ;
+	transition: 0.6s ;
+}  
+.responsiveImg{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+img { vertical-align: bottom;}
+
+/* br */
+.tbView,
+.spView{
+	display:none;
+}
+.pcView{
+	display:inherit;
+}
+.pcOff{
+	display:off;
+}
+
+.wow:first-child {
+      visibility: hidden;
+    }
+strong{
+background: linear-gradient(transparent 60%, #ffff66 60%);  
+}
+/*===========
+btn
+===========*/
+
+
+.btnWrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a.cp_btn {
+display: block;
+position: relative;
+width: 50%;
+padding: 0.8em;
+text-align: center;
+text-decoration: none;
+color: #fff;
+background: #000;
+border:3px solid #fff;
+overflow: hidden;
+font-size: 3rem;
+font-weight: bold;
+margin: 2% auto;
+    line-height: 1.2em;
+}
+a.cp_btn:after {
+content:"";
+position: absolute;
+top: -100%;
+left: -100%;
+height: 100%;
+width: 100%;
+background : #fff;
+opacity: 0.3;
+transition: .4s;
+}
+a.cp_btn:hover:after {
+top: 0;
+left: 0;
+}
+
+/*================================
+font
+================================*/
+
+.serifFont{font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;}
+.gothic{font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;}
+.din{font-family: "din-2014",sans-serif;}
+
+body{
+	color:#6d6d6d;
+	font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", "din-2014",sans-serif; 
+	line-height: 1.5em;
+   
+	}
+
+/*
+color
+*/
+
+.rideBlue{background: #018ec5;}
+.yellowBg{    background: #fff100;}
+.grayBg{background: #bcb9ae;}
+.grayhalfBg{background: rgba(188, 185, 185, .6)}
+.dgrayBg{background: rgba(0, 0, 0, .4)}
+
+.blueTxt{color: #018ec5;}
+.yellowTxt{color: #fff100;}
+.whiteTxt{color: #fff;}
+.redTxt{color: #e63535;}
+
+article a:link, article a:visited{
+    color: #000;
+    text-decoration: none;
+}
+
+article a:hover, article a:active{
+    color: #999;
+}
+
+.marker_yellow_hoso {
+background: linear-gradient(transparent 60%, #ffff66 60%);
+}
+
+mark{
+background: linear-gradient(transparent 60%, #66ccff 60%);
+text-decoration: none;
+    font-style: normal;
+    color: #000;
+}
+em{
+background: linear-gradient(transparent 40%, #fff 40%);
+text-decoration: none;
+    font-style: normal;
+    color: inherit;
+}
+
+/*================================
+structure
+================================*/
+article{
+      width: 100%;  
+
+}
+main{
+  
+}
+
+section{
+    width: 100%;
+}
+
+/* contents */
+#title{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#title h1{
+    font-size: 8rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+#title .party{
+    font-size: 7rem;
+    line-height: 1;
+
+}
+
+#contents{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.bg_o_black{background: rgba(0,0,0,.6);}
+.column_2_box{
+    width: 80%;
+    height: auto;
+    padding: 3%;
+}
+
+
+/*arrow*/
+
+/*================================
+header
+================================*/
+header{
+
+}
+
+#logo{
+    width: 6%;
+    height: auto;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+}
+#logo img{
+    width: 100%;
+    height: auto;
+}
+#contact{
+    position: absolute;
+    top: 15px;
+    right: 80px;
+}
+#contact a{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*================================
+footer
+================================*/
+
+footer{
+    background: #787d3c;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    font-weight: bold;
+    
+}
+footer a:link, footer a:visited{
+   color: #773e38;
+    text-decoration: none;
+    
+}
+footer a:hover, footer a:active{
+  color: #c0b9b2;
+}
+
+/*================================
+// 画面幅が1281px以上（PC専用スタイル）
+================================*/
+@media screen and (min-width: 1281px) {
+  
+}
+
+/*=============================================
+// 画面幅が767px以下（スマートフォン専用スタイル
+=============================================*/
+@media screen and (max-width: 767px) {
+.pcView{
+	display:none;
+}
+.spView{
+	display:inherit;
+}
+.tbView{
+	display:inherit;
+}
+.tbOff{
+	display:none;
+}
+     
+#logo{
+    width: 15%;
+    height: auto;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+}
+    
+/* contents */
+#title{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#title h1{
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+
+#title .party{
+    font-size: 3rem;
+    line-height: 1;
+
+}    
+    
+#contents{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.column_2_box{
+    width: 100%;
+    height: auto;
+    padding: 3%;
+}  
+    
+
+/*===========
+btn
+===========*/
+.btnWrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}  
+a.cp_btn {
+display: block;
+position: relative;
+width: 90%;
+padding: 0.8em;
+text-align: center;
+text-decoration: none;
+color: #fff;
+background: #000;
+border:3px solid #fff;
+overflow: hidden;
+font-size: 2rem;
+font-weight: bold;
+margin: 3% auto 0%;
+    line-height: 1.2em;
+}
+a.cp_btn:after {
+content:"";
+position: absolute;
+top: -100%;
+left: -100%;
+height: 100%;
+width: 100%;
+background : #fff;
+opacity: 0.3;
+transition: .4s;
+} 
+a.cp_btn {
+width: 80%;
+}
+
+
+    
+/*================================
+header
+================================*/
+header{
+    width: 100%;
+    height: auto;  
+    background: #efefef;
+
+}
+
+  #contact{
+    display: none;
+}
+#contact a{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+} 
+     
+/*================================
+footer
+================================*/
+footer{
+    background: #787d3c;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+ 
+    
+}
+
+/* 印刷用スタイル */
+/* ===============================
+	print setting
+ =============================== */
+@media print {
+	.printNl {
+		page-break-before: always;
+	}
+}
+
